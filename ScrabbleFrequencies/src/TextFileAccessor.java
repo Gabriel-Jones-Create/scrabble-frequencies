@@ -12,6 +12,10 @@ public abstract class TextFileAccessor {
 		scan = new Scanner(new FileReader(fileName));
 	}
 
+	/**
+	 * Every letter in the line is converted to a character and then is added to the respective index in the score board based on their ASCII values
+	 * 
+	 */
 	public void processFile() {
 		while (scan.hasNext()) {
 			processLine(scan.nextLine());
