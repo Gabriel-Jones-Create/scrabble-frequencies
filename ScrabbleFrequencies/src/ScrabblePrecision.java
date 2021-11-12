@@ -15,6 +15,13 @@ public class ScrabblePrecision extends TextFileAccessor {
 	private final char[] ALPHABET = "abcdefghijklmnopqrstuvwxyz".toCharArray();// character array of the alphabet
 	private final int ASCII_CODE_a = 97; // ASCII code value of lower case a
 
+	/**
+	 * Constructs a Scrabble Precision object based on file if the file name exists,
+	 * otherwise throws IOException
+	 * 
+	 * @param filename name of the file
+	 * @throws IOException if input file name does not exist
+	 */
 	public ScrabblePrecision(String filename) throws IOException {
 		openFile(filename);
 		scoreboard = new int[26]; // initializes score board variable with a length of 26
